@@ -1,0 +1,6 @@
+{
+  "name": "Mukwonago Basketball Stats",
+  "description": "A live stats tracker for Mukwonago Junior Indians youth basketball games, optimized for coaches and parents on the sideline.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

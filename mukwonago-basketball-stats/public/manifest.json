@@ -1,0 +1,24 @@
+{
+  "name": "CourtSide",
+  "short_name": "CourtSide",
+  "description": "Offline-first youth basketball stats, live scoring, AI recap, and season management.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1e",
+  "theme_color": "#0a0f1e",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
