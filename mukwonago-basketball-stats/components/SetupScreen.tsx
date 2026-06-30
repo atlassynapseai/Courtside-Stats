@@ -265,12 +265,10 @@ export default function SetupScreen({
 
               <div className="w-full max-w-sm rounded-3xl border border-brand-border bg-brand-navy/70 p-4 shadow-[0_18px_42px_rgba(0,0,0,0.34)]">
                 <div className="text-[10px] uppercase tracking-[0.22em] text-brand-muted">Core controls</div>
-                <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3">
+                <div className="mt-3 grid grid-cols-3 gap-2">
                   <HeroStat label="Setup" value="60s" />
                   <HeroStat label="Mode" value="Live" />
-                  <div className="col-span-2 sm:col-span-1">
-                    <HeroStat label="Broadcast" value="Ready" />
-                  </div>
+                  <HeroStat label="Broadcast" value="Ready" />
                 </div>
               </div>
             </div>
