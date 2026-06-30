@@ -1,0 +1,67 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="120" y1="40" x2="1080" y2="590" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a0f1e"/>
+      <stop offset="0.52" stop-color="#111827"/>
+      <stop offset="1" stop-color="#08111f"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 140) rotate(38) scale(320 220)">
+      <stop stop-color="#e8b84b" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#e8b84b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 170) rotate(-42) scale(300 210)">
+      <stop stop-color="#1d4ed8" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#1d4ed8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="630" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+  <g opacity="0.25">
+    <path d="M0 520H1200" stroke="#2a3a5c" stroke-width="2"/>
+    <path d="M0 430H1200" stroke="#2a3a5c" stroke-width="2"/>
+    <path d="M0 340H1200" stroke="#2a3a5c" stroke-width="2"/>
+    <path d="M0 250H1200" stroke="#2a3a5c" stroke-width="2"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="80" width="1040" height="470" rx="40" fill="#0f1729" fill-opacity="0.92" stroke="#2a3a5c" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(132 150)">
+    <rect x="0" y="0" width="130" height="130" rx="32" fill="#112B4F" stroke="#c8972a" stroke-width="3"/>
+    <circle cx="65" cy="65" r="39" fill="#1d4ed8" stroke="#e8b84b" stroke-width="3"/>
+    <path d="M26 65H104" stroke="#0a0f1e" stroke-width="3"/>
+    <path d="M65 26V104" stroke="#0a0f1e" stroke-width="3"/>
+    <path d="M37 37C48 48 48 82 37 93" stroke="#0a0f1e" stroke-width="3" fill="none"/>
+    <path d="M93 37C82 48 82 82 93 93" stroke="#0a0f1e" stroke-width="3" fill="none"/>
+    <rect x="40" y="54" width="50" height="20" rx="4" fill="#e8b84b"/>
+    <text x="65" y="69" fill="#0a0f1e" font-family="Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle">MUK</text>
+  </g>
+
+  <text x="300" y="205" fill="#e8b84b" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2.6">COURTSIDE BASKETBALL OPERATIONS</text>
+  <text x="300" y="275" fill="#ffffff" font-family="Arial, sans-serif" font-size="68" font-weight="800">Turn every game into a highlight reel of data.</text>
+  <text x="300" y="335" fill="#94a3b8" font-family="Arial, sans-serif" font-size="28" font-weight="500">Live scoring, season dashboards, AI recaps, and broadcast-style visuals.</text>
+
+  <g transform="translate(300 390)">
+    <rect width="180" height="92" rx="24" fill="#111827" stroke="#2a3a5c" stroke-width="2"/>
+    <text x="90" y="34" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="1.5">SETUP</text>
+    <text x="90" y="68" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="800" text-anchor="middle">60s</text>
+  </g>
+  <g transform="translate(504 390)">
+    <rect width="180" height="92" rx="24" fill="#111827" stroke="#2a3a5c" stroke-width="2"/>
+    <text x="90" y="34" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="1.5">MODE</text>
+    <text x="90" y="68" fill="#e8b84b" font-family="Arial, sans-serif" font-size="34" font-weight="800" text-anchor="middle">LIVE</text>
+  </g>
+  <g transform="translate(708 390)">
+    <rect width="180" height="92" rx="24" fill="#111827" stroke="#2a3a5c" stroke-width="2"/>
+    <text x="90" y="34" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="1.5">REPORTS</text>
+    <text x="90" y="68" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="800" text-anchor="middle">CSV</text>
+  </g>
+
+  <text x="300" y="545" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" font-weight="600">Offline-first youth basketball stats tracking for coaches and sideline scorekeepers.</text>
+</svg>

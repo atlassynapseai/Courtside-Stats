@@ -57,7 +57,7 @@ export interface PlayerStats {
 
 export function getPlayerStats(events: StatEvent[], player: Player, team: 'muk' | 'opponent'): PlayerStats {
   const playerEvents = events.filter((e) => e.team === team && e.playerId === player.id);
-  
+
   let pts = 0;
   let reb = 0;
   let ast = 0;
@@ -119,7 +119,7 @@ export function generateBoxScore(
   team: 'muk' | 'opponent'
 ): { players: PlayerStats[]; totals: Omit<PlayerStats, 'id' | 'name' | 'number'> } {
   const players = roster.map((p) => getPlayerStats(events, p, team));
-  
+
   const totals = players.reduce(
     (sum, p) => {
       sum.pts += p.pts;
@@ -166,7 +166,7 @@ export function formatPeriodAbbreviation(period: number, structure: 'halves' | '
 export function generateTextSummary(game: Game): string {
   const mukScore = getTeamScore(game.events, 'muk');
   const oppScore = getTeamScore(game.events, 'opponent');
-  
+
   const mukBox = generateBoxScore(game.mukRoster, game.events, 'muk');
   const oppBox = generateBoxScore(game.opponentRoster, game.events, 'opponent');
 
@@ -180,14 +180,14 @@ export function generateTextSummary(game: Game): string {
   text += `Mukwonago (Muk): ${mukScore}\n`;
   text += `${game.opponentTeam}: ${oppScore}\n`;
   text += `-------------------------------------------\n`;
-  
+
   text += `MUKWONAGO BOX SCORE:\n`;
   text += `Num  Name              PTS  REB  AST  STL  PF\n`;
   mukBox.players.forEach((p) => {
     text += `#${p.number.padEnd(3)} ${p.name.padEnd(17)} ${p.pts.toString().padEnd(4)} ${p.reb.toString().padEnd(4)} ${p.ast.toString().padEnd(4)} ${p.stl.toString().padEnd(4)} ${p.pf.toString().padEnd(2)}\n`;
   });
   text += `TOTALS                 ${mukBox.totals.pts.toString().padEnd(4)} ${mukBox.totals.reb.toString().padEnd(4)} ${mukBox.totals.ast.toString().padEnd(4)} ${mukBox.totals.stl.toString().padEnd(4)} ${mukBox.totals.pf.toString().padEnd(2)}\n`;
-  
+
   text += `-------------------------------------------\n`;
   text += `${game.opponentTeam.toUpperCase()} BOX SCORE:\n`;
   text += `Num  Name              PTS  REB  AST  STL  PF\n`;
@@ -195,10 +195,10 @@ export function generateTextSummary(game: Game): string {
     text += `#${p.number.padEnd(3)} ${p.name.padEnd(17)} ${p.pts.toString().padEnd(4)} ${p.reb.toString().padEnd(4)} ${p.ast.toString().padEnd(4)} ${p.stl.toString().padEnd(4)} ${p.pf.toString().padEnd(2)}\n`;
   });
   text += `TOTALS                 ${oppBox.totals.pts.toString().padEnd(4)} ${oppBox.totals.reb.toString().padEnd(4)} ${oppBox.totals.ast.toString().padEnd(4)} ${oppBox.totals.stl.toString().padEnd(4)} ${oppBox.totals.pf.toString().padEnd(2)}\n`;
-  
+
   text += `-------------------------------------------\n`;
   text += `Generated with Mukwonago Basketball Stats Tracker\n`;
-  
+
   return text;
 }
 

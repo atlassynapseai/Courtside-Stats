@@ -53,11 +53,10 @@ export default function Scoreboard({
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className={`flex h-16 w-16 items-center justify-center rounded-full border-2 text-xl font-black shadow-lg ${
-                  activeShotClock <= 5
+                className={`flex h-16 w-16 items-center justify-center rounded-full border-2 text-xl font-black shadow-lg ${activeShotClock <= 5
                     ? 'border-brand-red bg-brand-red/15 text-brand-red'
                     : 'border-brand-gold bg-brand-navy text-brand-white'
-                }`}
+                  }`}
               >
                 <span className="court-score-font">{activeShotClock}</span>
               </motion.div>

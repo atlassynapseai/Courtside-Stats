@@ -134,11 +134,10 @@ export default function VoiceStatLogger({ onTranscript, disabled = false }: Voic
           type="button"
           onClick={toggleListening}
           disabled={!supported || disabled}
-          className={`court-button inline-flex min-w-[120px] items-center justify-center gap-2 rounded-lg border px-4 text-sm font-semibold transition-all ${
-            listening
+          className={`court-button inline-flex min-w-[120px] items-center justify-center gap-2 rounded-lg border px-4 text-sm font-semibold transition-all ${listening
               ? 'border-brand-red/40 bg-brand-red/10 text-brand-red'
               : 'border-brand-border bg-brand-navy text-brand-white'
-          } ${!supported || disabled ? 'cursor-not-allowed opacity-50' : 'hover:border-brand-gold hover:text-brand-gold'}`}
+            } ${!supported || disabled ? 'cursor-not-allowed opacity-50' : 'hover:border-brand-gold hover:text-brand-gold'}`}
         >
           {listening ? <MicOff className="h-4 w-4" /> : <Mic className="h-4 w-4" />}
           {listening ? 'Listening' : 'Mic'}

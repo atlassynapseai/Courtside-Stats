@@ -111,7 +111,7 @@ export default function Page() {
   const handleStartGame = (newGame: Game) => {
     setActiveGame(newGame);
     setCurrentScreen('live-game');
-    
+
     // Persist rosters for next time pre-fills
     localStorage.setItem('muk_saved_roster_muk', JSON.stringify(newGame.mukRoster));
     localStorage.setItem('muk_saved_roster_opp', JSON.stringify(newGame.opponentRoster));
@@ -177,7 +177,7 @@ export default function Page() {
   if (!mounted) {
     return (
       <div id="loading-spinner" className="court-scene flex min-h-screen flex-col items-center justify-center bg-brand-navy text-brand-white px-4">
-          <div className="court-glass court-spotlight court-card-3d court-ridge rounded-[32px] border border-brand-border px-8 py-10 text-center shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+        <div className="court-glass court-spotlight court-card-3d court-ridge rounded-[32px] border border-brand-border px-8 py-10 text-center shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
           <LogoCrest size="md" className="mx-auto court-float" />
           <p className="mt-5 text-[11px] uppercase tracking-[0.28em] text-brand-gold">CourtSide is powering up</p>
           <p className="mt-3 max-w-sm text-sm leading-6 text-brand-muted">Loading live scoring, season history, and the broadcast-style dashboard.</p>
@@ -192,7 +192,7 @@ export default function Page() {
 
   return (
     <main id="app-root-main" className="min-h-screen bg-brand-navy text-brand-white relative overflow-x-hidden">
-      
+
       {/* Sideline In-Progress Banner (If they exited back to Setup tab but have a live game running) */}
       {currentScreen === 'setup' && activeGame && (
         <div id="active-game-banner" className="bg-[#112B4F] border-b-2 border-brand-gold py-2 px-4 flex items-center justify-between text-xs md:text-sm font-semibold text-brand-white">
@@ -276,9 +276,9 @@ export default function Page() {
               onContinueGame={
                 viewingGameSummary.status === 'in-progress'
                   ? () => {
-                      setActiveGame(viewingGameSummary);
-                      setCurrentScreen('live-game');
-                    }
+                    setActiveGame(viewingGameSummary);
+                    setCurrentScreen('live-game');
+                  }
                   : undefined
               }
             />

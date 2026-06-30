@@ -19,9 +19,8 @@ export default function PlayerCard({ player, team, events, active = false, onSel
       type="button"
       onClick={() => onSelect?.(player)}
       whileTap={{ scale: 0.985 }}
-      className={`court-glass court-button flex w-full items-center gap-3 rounded-2xl border p-3 text-left transition-all ${
-        active ? 'border-brand-gold shadow-[0_0_0_1px_rgba(200,151,42,0.6),0_0_24px_rgba(200,151,42,0.15)]' : 'border-brand-border'
-      }`}
+      className={`court-glass court-button flex w-full items-center gap-3 rounded-2xl border p-3 text-left transition-all ${active ? 'border-brand-gold shadow-[0_0_0_1px_rgba(200,151,42,0.6),0_0_24px_rgba(200,151,42,0.15)]' : 'border-brand-border'
+        }`}
     >
       <div className={`flex h-12 w-12 items-center justify-center rounded-2xl border text-lg font-black ${active ? 'border-brand-gold bg-brand-gold text-brand-navy' : 'border-brand-border bg-brand-slate text-brand-white'}`}>
         {player.number}
