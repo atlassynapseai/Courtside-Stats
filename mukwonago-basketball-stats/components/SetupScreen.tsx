@@ -265,10 +265,10 @@ export default function SetupScreen({
 
               <div className="w-full max-w-sm rounded-3xl border border-brand-border bg-brand-navy/70 p-4 shadow-[0_18px_42px_rgba(0,0,0,0.34)]">
                 <div className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand-muted">Core controls</div>
-                <div className="mt-3 grid grid-cols-3 gap-2">
-                  <HeroStat label="Setup" value="60s" />
-                  <HeroStat label="Mode" value="Live" />
-                  <HeroStat label="Broadcast" value="Ready" />
+                <div className="mt-3 space-y-2">
+                  <CoreControlStat label="Setup" value="60s" />
+                  <CoreControlStat label="Mode" value="Live" />
+                  <CoreControlStat label="Broadcast" value="Ready" />
                 </div>
               </div>
             </div>
@@ -512,8 +512,17 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 function HeroStat({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex min-h-[88px] min-w-0 flex-col justify-center rounded-2xl border border-brand-border bg-brand-slate/70 p-3 text-center">
-      <div className="overflow-hidden text-ellipsis whitespace-nowrap text-[10px] font-semibold uppercase leading-tight tracking-[0.08em] text-brand-muted">{label}</div>
+      <div className="court-safe-text text-[10px] font-semibold uppercase leading-tight tracking-[0.08em] text-brand-muted">{label}</div>
       <div className="court-score-font mt-1 text-2xl font-black leading-none text-brand-white">{value}</div>
+    </div>
+  );
+}
+
+function CoreControlStat({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex items-center justify-between rounded-xl border border-brand-border bg-brand-slate/70 px-3 py-2.5">
+      <span className="text-[11px] font-semibold uppercase tracking-[0.08em] text-brand-muted">{label}</span>
+      <span className="court-score-font text-2xl font-black leading-none text-brand-white">{value}</span>
     </div>
   );
 }
